@@ -13,7 +13,7 @@ const Select = styled.select`
     width: 100%;
     font-size: 18px;
     font-family: 'Space Grotesk', sans-serif;
-    color: gray;
+    color: #606065;
     font-weight: 500;
     padding: 14px;
     border-radius: 10px;
@@ -29,7 +29,7 @@ const useSelectMonedas = (label, opciones) => {
                 value={state}
                 onChange={e => setState(e.target.value)}
             >
-                <option value="">Select Coin</option>
+                <option hidden selected value=""> -- Select an option -- </option>
                 {opciones.map(opcion => (
                     <option
                         key={opcion.id}

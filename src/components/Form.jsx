@@ -11,9 +11,9 @@ const InputSubmit = styled.input`
     padding: 10px;
     color: #FFFFFF;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 22px;
     font-family: 'Space Grotesk', sans-serif;
-    letter-spacing: .8px;
+    letter-spacing: .4px;
     border-radius: 10px;
     margin-top: 30px;
     transition: background-color .3s ease-in-out;
@@ -23,12 +23,12 @@ const InputSubmit = styled.input`
     }
 `
 
-const Form = () => {
+const Form = ({setMonedas}) => {
   const [criptos, setCriptos] = useState([])
   const [error, setError] = useState(false)
 
-  const [ moneda, SelectMonedas ] = useSelectMonedas('Elige tu moneda', monedas)
-  const [ cripto, SelectCripto ] = useSelectMonedas('Elige tu Criptomoneda', criptos)
+  const [ moneda, SelectMonedas ] = useSelectMonedas('Choose your coin', monedas)
+  const [ cripto, SelectCripto ] = useSelectMonedas('Choose your Cripto', criptos)
 
   SelectMonedas()
   SelectCripto()
@@ -59,6 +59,10 @@ const Form = () => {
         return
     }
     setError(false)
+    setMonedas({
+        moneda,
+        cripto
+    })
   }
 
   return (
@@ -73,7 +77,7 @@ const Form = () => {
 
             <InputSubmit 
                 type="submit"
-                value="Cotizar"
+                value="Quote"
             />
         </form>
     </>

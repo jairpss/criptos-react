@@ -13,7 +13,7 @@ const Select = styled.select`
     width: 100%;
     font-size: 18px;
     font-family: 'Space Grotesk', sans-serif;
-    color: #606065;
+    color: #5b5b5e;
     font-weight: 500;
     padding: 14px;
     border-radius: 10px;

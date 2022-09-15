@@ -7,6 +7,9 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     gap: 1em;
+    background-color: #102a43;
+    padding: 10px;
+    border-radius: 1rem;
 `
 const Img = styled.img`
     display: block;
